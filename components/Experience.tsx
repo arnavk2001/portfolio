@@ -1,3 +1,5 @@
+import { Heading, Text } from './ui';
+
 const experiences = [
   {
     title: "Senior Software Engineer",
@@ -44,15 +46,15 @@ export default function Experience() {
     <section id="experience" className="py-32 px-6 relative">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-4 font-[family-name:var(--font-space-grotesk)]">
+          <Heading level={2} className="mb-4">
             Work <span className="gradient-text">Experience</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+          </Heading>
+          <div className="w-24 h-1 bg-gradient-to-r from-sky-600 to-sky-400 mx-auto rounded-full"></div>
         </div>
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 via-purple-600 to-pink-600"></div>
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-sky-500 via-sky-600 to-sky-500"></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -63,31 +65,31 @@ export default function Experience() {
                 }`}
               >
                 {/* Timeline dot */}
-                <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 border-4 border-slate-950 z-10"></div>
+                <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-r from-sky-600 to-sky-400 border-4 border-background-secondary z-10"></div>
 
                 <div className={`w-full md:w-[calc(50%-2rem)] ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
-                  <div className="glass-strong rounded-2xl p-8 shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 group hover:-translate-y-1 border border-slate-700/50">
+                  <div className="glass-strong rounded-2xl p-8 shadow-2xl hover:shadow-ocean-light/10 transition-all duration-300 group hover:-translate-y-1 border border-border-default">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <div>
-                        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                        <Heading level={3} className="mb-2 group-hover:text-ocean-light transition-colors">
                           {exp.title}
-                        </h3>
-                        <p className="text-blue-400 text-lg font-semibold">{exp.company}</p>
+                        </Heading>
+                        <Text variant="accent" size="lg" className="font-semibold">{exp.company}</Text>
                       </div>
-                      <span className="inline-block px-4 py-2 bg-blue-600/20 text-blue-300 rounded-lg text-sm font-medium mt-2 md:mt-0 border border-blue-500/30">
+                      <span className="inline-block px-4 py-2 bg-ocean-light/20 text-ocean-light rounded-lg text-sm font-medium mt-2 md:mt-0 border border-ocean-light/30">
                         {exp.period}
                       </span>
                     </div>
                     
-                    <p className="text-slate-300 mb-4 leading-relaxed">{exp.description}</p>
+                    <Text variant="secondary" className="mb-4 leading-relaxed">{exp.description}</Text>
                     
                     <ul className="space-y-2 mb-6">
                       {exp.achievements.map((achievement, idx) => (
                         <li key={idx} className="flex items-start gap-2">
-                          <svg className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-5 h-5 text-ocean-light mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
-                          <span className="text-slate-300">{achievement}</span>
+                          <Text variant="secondary">{achievement}</Text>
                         </li>
                       ))}
                     </ul>
@@ -96,7 +98,7 @@ export default function Experience() {
                       {exp.tags.map((tag, idx) => (
                         <span 
                           key={idx}
-                          className="px-3 py-1 bg-slate-800/80 text-slate-300 rounded-lg text-sm border border-slate-700 hover:border-blue-500/50 transition-colors"
+                          className="px-3 py-1 bg-background-tertiary text-text-secondary rounded-lg text-sm border border-border-default hover:border-ocean-light/50 transition-colors"
                         >
                           {tag}
                         </span>
