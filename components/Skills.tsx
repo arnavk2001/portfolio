@@ -1,3 +1,5 @@
+import { Heading, Text } from './ui';
+
 const skillCategories = [
   {
     title: "Frontend Development",
@@ -7,7 +9,7 @@ const skillCategories = [
       </svg>
     ),
     skills: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Vue.js", "HTML/CSS", "Redux"],
-    gradient: "from-blue-600 to-cyan-600"
+    gradient: "from-sky-600 to-sky-400"
   },
   {
     title: "Backend Development",
@@ -17,7 +19,7 @@ const skillCategories = [
       </svg>
     ),
     skills: ["Node.js", "Python", "Express", "FastAPI", "REST APIs", "GraphQL", "PostgreSQL", "MongoDB"],
-    gradient: "from-purple-600 to-pink-600"
+    gradient: "from-sky-500 to-sky-600"
   },
   {
     title: "DevOps & Cloud",
@@ -27,7 +29,7 @@ const skillCategories = [
       </svg>
     ),
     skills: ["Docker", "AWS", "CI/CD", "Kubernetes", "Linux", "Nginx", "Redis", "Git"],
-    gradient: "from-orange-600 to-red-600"
+    gradient: "from-sky-700 to-sky-500"
   },
   {
     title: "Tools & Practices",
@@ -38,7 +40,7 @@ const skillCategories = [
       </svg>
     ),
     skills: ["System Design", "Agile/Scrum", "Testing", "Code Review", "Problem Solving", "Team Leadership"],
-    gradient: "from-green-600 to-teal-600"
+    gradient: "from-sky-600 to-sky-700"
   }
 ];
 
@@ -47,38 +49,38 @@ export default function Skills() {
     <section id="skills" className="py-32 px-6 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-4 font-[family-name:var(--font-space-grotesk)]">
+          <Heading level={2} className="mb-4">
             Skills & <span className="gradient-text">Expertise</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
-          <p className="text-slate-400 mt-6 text-lg max-w-2xl mx-auto">
+          </Heading>
+          <div className="w-24 h-1 bg-gradient-to-r from-sky-600 to-sky-400 mx-auto rounded-full"></div>
+          <Text variant="secondary" size="lg" className="mt-6 max-w-2xl mx-auto">
             Technologies and tools I use to bring ideas to life
-          </p>
+          </Text>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
             <div 
               key={index}
-              className="glass-strong rounded-3xl p-8 shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 group hover:-translate-y-1 border border-slate-700/50 relative overflow-hidden"
+              className="glass-strong rounded-3xl p-8 shadow-2xl hover:shadow-ocean-light/20 transition-all duration-300 group hover:-translate-y-1 border border-border-default relative overflow-hidden"
             >
               {/* Gradient overlay */}
               <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
               
               <div className="relative z-10">
-                <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${category.gradient} bg-opacity-10 mb-6 text-white`}>
+                <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${category.gradient} bg-opacity-10 mb-6 text-ocean-light`}>
                   {category.icon}
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-blue-400 transition-colors">
+                <Heading level={3} className="mb-6 group-hover:text-ocean-light transition-colors">
                   {category.title}
-                </h3>
+                </Heading>
                 
                 <div className="flex flex-wrap gap-3">
                   {category.skills.map((skill, idx) => (
                     <span 
                       key={idx}
-                      className="px-4 py-2.5 glass rounded-xl text-slate-200 hover:bg-slate-700/60 transition-all transform hover:scale-105 font-medium border border-slate-700/50 hover:border-blue-500/50"
+                      className="px-4 py-2.5 glass rounded-xl text-text-primary hover:bg-ocean-light/10 transition-all transform hover:scale-105 font-medium border border-border-default hover:border-ocean-light/50"
                     >
                       {skill}
                     </span>
@@ -91,12 +93,12 @@ export default function Skills() {
 
         {/* Tech Stack Highlights */}
         <div className="mt-16 text-center">
-          <p className="text-slate-400 mb-6">Also experienced with</p>
+          <Text variant="secondary" className="mb-6">Also experienced with</Text>
           <div className="flex flex-wrap justify-center gap-4">
             {['Webpack', 'Vite', 'Jest', 'Prisma', 'Supabase', 'Firebase', 'Vercel', 'Figma'].map((tech, idx) => (
               <span 
                 key={idx}
-                className="px-4 py-2 glass rounded-lg text-slate-300 text-sm border border-slate-700/50"
+                className="px-4 py-2 glass rounded-lg text-text-secondary text-sm border border-border-default"
               >
                 {tech}
               </span>
