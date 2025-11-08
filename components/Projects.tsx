@@ -7,7 +7,9 @@ const projects = [
     technologies: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "Tailwind CSS"],
     github: "#",
     demo: "#",
-    gradient: "from-sky-600 to-sky-400"
+    gradient: "from-sky-600 to-sky-400",
+    accentColor: "text-ocean-light",
+    borderColor: "hover:border-ocean-light/50"
   },
   {
     title: "AI Content Generator",
@@ -15,7 +17,9 @@ const projects = [
     technologies: ["Python", "FastAPI", "React", "OpenAI API", "Docker"],
     github: "#",
     demo: "#",
-    gradient: "from-sky-500 to-sky-600"
+    gradient: "from-purple-600 to-purple-400",
+    accentColor: "text-accent-purple-light",
+    borderColor: "hover:border-purple-400/50"
   },
   {
     title: "Real-Time Analytics Dashboard",
@@ -23,7 +27,9 @@ const projects = [
     technologies: ["Vue.js", "D3.js", "Node.js", "Redis", "PostgreSQL"],
     github: "#",
     demo: "#",
-    gradient: "from-sky-700 to-sky-500"
+    gradient: "from-orange-600 to-orange-400",
+    accentColor: "text-accent-orange-light",
+    borderColor: "hover:border-orange-400/50"
   },
   {
     title: "Task Management System",
@@ -31,7 +37,9 @@ const projects = [
     technologies: ["React", "Node.js", "MongoDB", "Socket.io", "Express"],
     github: "#",
     demo: "#",
-    gradient: "from-sky-600 to-sky-700"
+    gradient: "from-pink-600 to-pink-400",
+    accentColor: "text-accent-magenta-light",
+    borderColor: "hover:border-pink-400/50"
   }
 ];
 
@@ -53,7 +61,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="glass-strong rounded-3xl p-8 shadow-2xl hover:shadow-ocean-light/20 transition-all duration-300 group hover:-translate-y-2 border border-border-default relative overflow-hidden"
+              className={`glass-strong rounded-3xl p-8 shadow-2xl hover:shadow-ocean-light/20 transition-all duration-300 group hover:-translate-y-2 border border-border-default ${project.borderColor} relative overflow-hidden`}
             >
               {/* Gradient overlay on hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
@@ -61,7 +69,7 @@ export default function Projects() {
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-4">
                   <div className={`p-3 rounded-xl bg-gradient-to-br ${project.gradient} bg-opacity-10`}>
-                    <svg className="w-8 h-8 text-ocean-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className={`w-8 h-8 ${project.accentColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                     </svg>
                   </div>
@@ -87,7 +95,7 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <Heading level={3} className="mb-3 group-hover:text-ocean-light transition-colors">
+                <Heading level={3} className={`mb-3 group-hover:${project.accentColor} transition-colors`}>
                   {project.title}
                 </Heading>
                 <Text variant="secondary" className="mb-6 leading-relaxed min-h-[4.5rem]">

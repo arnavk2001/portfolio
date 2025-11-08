@@ -4,7 +4,7 @@ interface ButtonProps {
   children: ReactNode;
   href?: string;
   variant?: 'solid' | 'gradient' | 'outline' | 'ghost';
-  gradientType?: 'primary' | 'secondary' | 'accent';
+  gradientType?: 'primary' | 'secondary' | 'accent' | 'complementary' | 'orange' | 'purple' | 'magenta';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   onClick?: () => void;
@@ -34,6 +34,10 @@ export function Button({
         primary: 'bg-gradient-to-r from-sky-600 via-sky-500 to-sky-600 animate-gradient',
         secondary: 'bg-gradient-to-r from-sky-700 via-sky-600 to-sky-500 animate-gradient-xy',
         accent: 'bg-gradient-to-r from-sky-500 via-sky-400 to-sky-500 animate-gradient',
+        complementary: 'bg-gradient-to-r from-orange-500 via-orange-400 to-yellow-400 animate-gradient',
+        orange: 'bg-gradient-to-r from-orange-600 via-orange-500 to-orange-400 animate-gradient',
+        purple: 'bg-gradient-to-r from-purple-600 via-purple-500 to-purple-400 animate-gradient',
+        magenta: 'bg-gradient-to-r from-pink-600 via-pink-500 to-pink-400 animate-gradient',
       };
       return `${gradients[gradientType]} text-white shadow-2xl hover:shadow-ocean-light/50`;
     })(),

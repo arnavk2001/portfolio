@@ -14,6 +14,13 @@
   --ocean-deep: #0c4a6e;
   --border-default: #cbd5e1;
   --border-light: #e2e8f0;
+  /* Accent colors */
+  --accent-orange: #f97316;
+  --accent-orange-light: #fb923c;
+  --accent-purple: #a855f7;
+  --accent-purple-light: #c084fc;
+  --accent-magenta: #ec4899;
+  --accent-magenta-light: #f472b6;
 }
 
 .dark {
@@ -30,6 +37,13 @@
   --ocean-deep: #0c4a6e;
   --border-default: #1e293b;
   --border-light: #334155;
+  /* Accent colors */
+  --accent-orange: #fb923c;
+  --accent-orange-light: #fdba74;
+  --accent-purple: #c084fc;
+  --accent-purple-light: #d8b4fe;
+  --accent-magenta: #f472b6;
+  --accent-magenta-light: #f9a8d4;
 }
 
 @theme inline {
@@ -45,6 +59,12 @@
   --color-ocean-deep: var(--ocean-deep);
   --color-border-default: var(--border-default);
   --color-border-light: var(--border-light);
+  --color-accent-orange: var(--accent-orange);
+  --color-accent-orange-light: var(--accent-orange-light);
+  --color-accent-purple: var(--accent-purple);
+  --color-accent-purple-light: var(--accent-purple-light);
+  --color-accent-magenta: var(--accent-magenta);
+  --color-accent-magenta-light: var(--accent-magenta-light);
   --font-sans: var(--font-plus-jakarta-sans);
   --font-display: var(--font-plus-jakarta-sans);
   --font-mono: var(--font-jetbrains-mono);
@@ -53,7 +73,8 @@
 body {
   background-color: var(--background);
   color: var(--text-primary);
-  font-family: var(--font-plus-jakarta-sans), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-plus-jakarta-sans), system-ui, -apple-system,
+    sans-serif;
   scroll-behavior: smooth;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
