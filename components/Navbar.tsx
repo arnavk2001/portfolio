@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { Button } from './ui';
+import { ThemeToggle } from './ThemeToggle';
 
 const navItems = [
   { name: 'Home', href: '#hero' },
@@ -40,7 +42,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out border ${
         isScrolled
-          ? 'glass-strong shadow-lg py-4 border-slate-700/50'
+          ? 'glass-strong shadow-lg shadow-ocean-blue/10 py-4 border-ocean-light/20'
           : 'bg-transparent py-6 border-transparent'
       }`}
     >
@@ -48,7 +50,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <a
             href="#hero"
-            className="text-2xl font-bold gradient-text font-[family-name:var(--font-space-grotesk)]"
+            className="text-2xl font-bold gradient-text font-[family-name:var(--font-plus-jakarta-sans)]"
           >
             AK
           </a>
@@ -60,8 +62,8 @@ export default function Navbar() {
                 href={item.href}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                   activeSection === item.href.slice(1)
-                    ? 'bg-blue-600 text-white'
-                    : 'text-slate-300 hover:text-white hover:bg-slate-800/50'
+                    ? 'bg-ocean-blue/80 text-white'
+                    : 'text-text-secondary hover:text-text-primary hover:bg-ocean-light/10'
                 }`}
               >
                 {item.name}
@@ -69,12 +71,18 @@ export default function Navbar() {
             ))}
           </div>
 
-          <a
-            href="#contact"
-            className="hidden md:block px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg"
-          >
-            Hire Me
-          </a>
+          <div className="flex items-center gap-3">
+            <ThemeToggle />
+            <Button 
+              href="#contact" 
+              variant="gradient" 
+              gradientType="secondary"
+              size="sm"
+              className="hidden md:inline-flex"
+            >
+              Hire Me
+            </Button>
+          </div>
         </div>
       </div>
     </nav>
