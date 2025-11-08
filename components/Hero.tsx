@@ -34,11 +34,11 @@ export default function Hero() {
               </feMerge>
             </filter>
           </defs>
-          <path fill="url(#heroWaveGradient)" filter="url(#heroGlow)" d="M0,300 Q300,350 600,300 T1200,300 L1200,0 L0,0 Z">
+          <path fill="url(#heroWaveGradient)" filter="url(#heroGlow)" d="M0,300 Q150,350 300,300 Q450,250 600,300 Q750,350 900,300 Q1050,250 1200,300 L1200,0 L0,0 Z">
             <animate attributeName="d" dur="18s" repeatCount="indefinite"
-              values="M0,300 Q300,350 600,300 T1200,300 L1200,0 L0,0 Z;
-                      M0,300 Q300,250 600,300 T1200,300 L1200,0 L0,0 Z;
-                      M0,300 Q300,350 600,300 T1200,300 L1200,0 L0,0 Z" />
+              values="M0,300 Q150,350 300,300 Q450,250 600,300 Q750,350 900,300 Q1050,250 1200,300 L1200,0 L0,0 Z;
+                      M0,300 Q150,250 300,300 Q450,350 600,300 Q750,250 900,300 Q1050,350 1200,300 L1200,0 L0,0 Z;
+                      M0,300 Q150,350 300,300 Q450,250 600,300 Q750,350 900,300 Q1050,250 1200,300 L1200,0 L0,0 Z" />
           </path>
         </svg>
       </div>
