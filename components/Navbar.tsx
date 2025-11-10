@@ -1,28 +1,33 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import { Button } from './ui';
 import { ThemeToggle } from './ThemeToggle';
 
 const navItems = [
-  { name: 'Home', href: '#hero' },
-  { name: 'About', href: '#about' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Home', href: '/#hero' },
+  { name: 'About', href: '/about-me' },
+  { name: 'Experience', href: '/#experience' },
+  { name: 'Projects', href: '/#projects' },
+  { name: 'Skills', href: '/#skills' },
+  { name: 'Contact', href: '/#contact' },
 ];
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
       // Update active section based on scroll position
-      const sections = navItems.map(item => item.href.slice(1));
+      const sections = navItems
+        .filter(item => item.href.startsWith('/#'))
+        .map(item => item.href.slice(2));
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -37,6 +42,18 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const isActive = (href: string) => {
+    // If we're on /about-me page, only highlight the About link
+    if (pathname === '/about-me') {
+      return href === '/about-me';
+    }
+    // If we're on home page, highlight based on scroll position
+    if (href.startsWith('/#')) {
+      return activeSection === href.slice(2);
+    }
+    return false;
+  };
 
   return (
     <nav
@@ -57,17 +74,17 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                  activeSection === item.href.slice(1)
+                  isActive(item.href)
                     ? 'bg-ocean-blue/80 text-white'
                     : 'text-text-secondary hover:text-text-primary hover:bg-ocean-light/10'
                 }`}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
 
