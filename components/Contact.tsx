@@ -23,7 +23,7 @@ export default function Contact() {
             
             <div className="grid md:grid-cols-3 gap-6 mb-12">
               <a 
-                href="mailto:arnav@example.com"
+                href="mailto:a3kulkarni@ucsd.edu"
                 className="glass rounded-2xl p-6 hover:bg-ocean-light/10 transition-all group text-center"
               >
                 <div className="inline-flex p-4 rounded-xl bg-ocean-light/20 mb-4">
@@ -32,11 +32,11 @@ export default function Contact() {
                   </svg>
                 </div>
                 <Heading level={3} className="mb-2">Email</Heading>
-                <Text variant="secondary" size="sm">arnav@example.com</Text>
+                <Text variant="secondary" size="sm">a3kulkarni@ucsd.edu</Text>
               </a>
 
               <a 
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/a3kulkarni"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass rounded-2xl p-6 hover:bg-ocean-light/10 transition-all group text-center"
@@ -47,11 +47,11 @@ export default function Contact() {
                   </svg>
                 </div>
                 <Heading level={3} className="mb-2">LinkedIn</Heading>
-                <Text variant="secondary" size="sm">Connect with me</Text>
+                <Text variant="secondary" size="sm">a3kulkarni</Text>
               </a>
 
               <a 
-                href="https://github.com"
+                href="https://github.com/arnavk2001"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass rounded-2xl p-6 hover:bg-ocean-light/10 transition-all group text-center"
@@ -62,7 +62,7 @@ export default function Contact() {
                   </svg>
                 </div>
                 <Heading level={3} className="mb-2">GitHub</Heading>
-                <Text variant="secondary" size="sm">View my code</Text>
+                <Text variant="secondary" size="sm">arnavk2001</Text>
               </a>
             </div>
 

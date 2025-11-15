@@ -63,10 +63,8 @@ export default function Hero() {
         </Text>
         
         <Text size="xl" variant="secondary" className="mb-12 max-w-3xl mx-auto animate-fade-in-delay-2 leading-relaxed">
-          Like the vast ocean, exploring endless depths of technology. Crafting elegant solutions 
-          with the fluidity of water and the power of tides.
+          I am a software developer and machine learning enthusiast with hands-on experience in research, systems engineering, On-device deep learning, and Generative AI. I am excited to contribute to innovative projects that make a meaningful impact.
         </Text>
-
         <div className="flex flex-wrap justify-center gap-4 animate-fade-in-delay-3">
           <Button href="#projects" variant="gradient" gradientType="primary" size="lg">
             <span>Dive Into My Work</span>

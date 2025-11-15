@@ -2,46 +2,46 @@ import { Heading, Text } from './ui';
 
 const skillCategories = [
   {
-    title: "Frontend Development",
+    title: "Languages",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
       </svg>
     ),
-    skills: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Vue.js", "HTML/CSS", "Redux"],
+    skills: ["C++", "C", "Python", "Go", "JavaScript", "TypeScript", "Java", "Dart", "Ruby", "SQL", "HTML/CSS"],
     gradient: "from-sky-600 to-sky-400"
   },
   {
-    title: "Backend Development",
+    title: "Frameworks & Libraries",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
       </svg>
     ),
-    skills: ["Node.js", "Python", "Express", "FastAPI", "REST APIs", "GraphQL", "PostgreSQL", "MongoDB"],
+    skills: ["React", "Next.js", "Django", "FastAPI", "Flask", "Flutter", "Ruby on Rails", "Jest", "Tailwind CSS", "Bootstrap", "PostgreSQL", "MongoDB"],
     gradient: "from-sky-500 to-sky-600"
   },
   {
-    title: "DevOps & Cloud",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-      </svg>
-    ),
-    skills: ["Docker", "AWS", "CI/CD", "Kubernetes", "Linux", "Nginx", "Redis", "Git"],
-    gradient: "from-sky-700 to-sky-500"
-  },
-  {
-    title: "Tools & Practices",
+    title: "AI/ML",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     ),
-    skills: ["System Design", "Agile/Scrum", "Testing", "Code Review", "Problem Solving", "Team Leadership"],
+    skills: ["PyTorch", "TensorFlow", "scikit-learn", "Keras", "OpenCV", "NLTK", "spaCy", "Pandas", "NumPy", "Hugging Face"],
     gradient: "from-sky-600 to-sky-700"
-  }
+  },
+  {
+    title: "Tools & Cloud",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+      </svg>
+    ),
+    skills: ["Docker", "AWS", "Sagemaker", "Google Cloud", "Kubernetes", "CI/CD", "Linux", "Git", "Nginx", "Vercel"],
+    gradient: "from-sky-700 to-sky-500"
+  },
 ];
 
 export default function Skills() {
@@ -89,21 +89,6 @@ export default function Skills() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Tech Stack Highlights */}
-        <div className="mt-16 text-center">
-          <Text variant="secondary" className="mb-6">Also experienced with</Text>
-          <div className="flex flex-wrap justify-center gap-4">
-            {['Webpack', 'Vite', 'Jest', 'Prisma', 'Supabase', 'Firebase', 'Vercel', 'Figma'].map((tech, idx) => (
-              <span 
-                key={idx}
-                className="px-4 py-2 glass rounded-lg text-text-secondary text-sm border border-border-default"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
     </section>
