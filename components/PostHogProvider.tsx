@@ -69,7 +69,9 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
               depth_percentage: scrollPercentage,
               page_path: window.location.pathname,
             };
-            console.log('📊 PostHog Event [DEV]: scroll_depth', eventData);
+            if (isDev) {
+              console.log('📊 PostHog Event [DEV]: scroll_depth', eventData);
+            }
             posthog.capture('scroll_depth', eventData);
           }
         }

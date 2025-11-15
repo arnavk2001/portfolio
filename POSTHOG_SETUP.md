@@ -132,6 +132,26 @@ PostHog is configured with:
 - No automatic sensitive data collection
 - GDPR compliant with proper configuration
 
+## Known Limitations
+
+### Ad Blockers
+**PostHog requests may be blocked by ad blockers** (ERR_BLOCKED_BY_CLIENT error in console).
+
+This is expected behavior and affects most analytics tools:
+- **uBlock Origin**, **AdBlock Plus**, **Privacy Badger** all block PostHog by default
+- Analytics still works for users without ad blockers (~40-60% of visitors)
+- Events are gracefully handled - no errors shown to users
+- This is a tradeoff for privacy-conscious analytics
+
+**Solutions if you need 100% tracking:**
+1. Self-host PostHog on your own domain (advanced)
+2. Use PostHog's reverse proxy feature (requires server configuration)
+3. Accept that ad-blocker users won't be tracked (recommended for privacy)
+
+**Current behavior:**
+- Ad blocker users: Analytics silently fails, site works perfectly
+- Non-ad-blocker users: Full analytics tracking works
+
 ## Additional Features You Can Add
 
 - **Session recordings** - Watch user interactions

@@ -10,7 +10,9 @@ export default function Contact() {
       button_type: 'linkedin',
       button_location: 'contact_section',
     };
-    console.log('📊 PostHog Event [DEV]: connect_button_clicked', eventData);
+    if (process.env.NODE_ENV === 'development') {
+      console.log('📊 PostHog Event [DEV]: connect_button_clicked', eventData);
+    }
     posthog.capture('connect_button_clicked', eventData);
   };
 
@@ -19,7 +21,9 @@ export default function Contact() {
       button_type: 'github',
       button_location: 'contact_section',
     };
-    console.log('📊 PostHog Event [DEV]: connect_button_clicked', eventData);
+    if (process.env.NODE_ENV === 'development') {
+      console.log('📊 PostHog Event [DEV]: connect_button_clicked', eventData);
+    }
     posthog.capture('connect_button_clicked', eventData);
   };
 
@@ -29,7 +33,9 @@ export default function Contact() {
       button_location: 'contact_section',
       email: 'arnavvaibhavkulkarni@gmail.com',
     };
-    console.log('📊 PostHog Event [DEV]: email_button_clicked', eventData);
+    if (process.env.NODE_ENV === 'development') {
+      console.log('📊 PostHog Event [DEV]: email_button_clicked', eventData);
+    }
     posthog.capture('email_button_clicked', eventData);
   };
 

@@ -9,7 +9,9 @@ export default function Hero() {
       button_type: 'hire_me',
       button_location: 'hero_section',
     };
-    console.log('📊 PostHog Event [DEV]: hire_me_button_clicked', eventData);
+    if (process.env.NODE_ENV === 'development') {
+      console.log('📊 PostHog Event [DEV]: hire_me_button_clicked', eventData);
+    }
     posthog.capture('hire_me_button_clicked', eventData);
   };
 

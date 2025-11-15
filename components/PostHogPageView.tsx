@@ -16,7 +16,9 @@ export function PostHogPageView() {
       }
       
       const eventData = { $current_url: url };
-      console.log('📊 PostHog Event [DEV]: $pageview', eventData);
+      if (process.env.NODE_ENV === 'development') {
+        console.log('📊 PostHog Event [DEV]: $pageview', eventData);
+      }
       posthog.capture('$pageview', eventData);
     }
   }, [pathname, searchParams]);
