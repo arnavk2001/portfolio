@@ -16,27 +16,37 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>('dark');
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') as Theme;
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    const initialTheme = savedTheme || systemTheme;
-    setTheme(initialTheme);
-    document.documentElement.classList.toggle('dark', initialTheme === 'dark');
+    // Check localStorage first, then fall back to system preference
+    const savedTheme = localStorage.getItem('theme') as Theme | null;
+    if (savedTheme) {
+      // This is intentional - we need to sync with localStorage on mount
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      setTheme(savedTheme);
+    } else {
+      // Use system preference if no saved theme
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(systemPrefersDark ? 'dark' : 'light');
+    }
     setMounted(true);
   }, []);
 
   useEffect(() => {
-    document.documentElement.classList.toggle('dark', theme === 'dark');
-  }, [theme]);
+    if (!mounted) return;
+
+    const root = document.documentElement;
+    
+    // Remove all theme classes
+    root.classList.remove('dark', 'light');
+    
+    // Add the current theme class
+    root.classList.add(theme);
+  }, [theme, mounted]);
 
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
   };
-
-  if (!mounted) {
-    return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
-  }
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

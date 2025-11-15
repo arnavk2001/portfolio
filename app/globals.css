@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  /* Light mode colors */
+  /* Light mode colors (default) */
   --background: #f8fafc;
   --background-secondary: #f1f5f9;
   --background-tertiary: #e2e8f0;
@@ -23,6 +23,33 @@
   --accent-magenta-light: #f472b6;
 }
 
+/* System preference for dark mode */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    /* Dark mode colors */
+    --background: #000810;
+    --background-secondary: #001220;
+    --background-tertiary: #011627;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --ocean-blue: #0284c7;
+    --ocean-dark: #075985;
+    --ocean-light: #0ea5e9;
+    --ocean-deep: #0c4a6e;
+    --border-default: #1e293b;
+    --border-light: #334155;
+    /* Accent colors */
+    --accent-orange: #fb923c;
+    --accent-orange-light: #fdba74;
+    --accent-purple: #c084fc;
+    --accent-purple-light: #d8b4fe;
+    --accent-magenta: #f472b6;
+    --accent-magenta-light: #f9a8d4;
+  }
+}
+
+/* Manual dark mode override */
 .dark {
   /* Dark mode colors */
   --background: #000810;
@@ -236,6 +263,14 @@ html.dark body {
   transition: all 0.3s ease;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) .glass {
+    background: rgba(1, 18, 32, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(14, 165, 233, 0.1);
+  }
+}
+
 .dark .glass {
   background: rgba(1, 18, 32, 0.5);
   backdrop-filter: blur(10px);
@@ -247,6 +282,14 @@ html.dark body {
   backdrop-filter: blur(16px);
   border: 1px solid transparent;
   transition: all 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) .glass-strong {
+    background: rgba(1, 18, 32, 0.8);
+    backdrop-filter: blur(16px);
+    border: 1px solid transparent;
+  }
 }
 
 .dark .glass-strong {
