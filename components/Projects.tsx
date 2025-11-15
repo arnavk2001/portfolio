@@ -129,7 +129,7 @@ export default function Projects() {
 
         <div className="text-center mt-12">
           <a 
-            href="https://github.com"
+            href="https://github.com/arnavk2001"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 bg-[#24292e] hover:bg-[#1b1f23] text-white rounded-xl font-semibold transition-all transform hover:scale-105 shadow-xl border border-[#30363d]"
