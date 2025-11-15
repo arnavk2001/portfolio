@@ -6,7 +6,7 @@ import { Heading, Text, Button } from './ui';
 
 export default function Hero() {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-32 md:pt-20 relative overflow-hidden">
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[20%] left-[10%] w-2 h-2 bg-ocean-light/35 dark:bg-ocean-light/25 rounded-full animate-float shadow-md shadow-ocean-light/25" style={{ animationDuration: '6s', animationDelay: '0s' }}></div>

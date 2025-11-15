@@ -3,8 +3,8 @@ import { Heading, Text } from './ui';
 
 export default function About() {
   return (
-    <section id="about" className="py-32 px-6 relative">
-      <div className="max-w-5xl mx-auto">
+    <section id="about" className="py-16 md:py-32 px-6 relative">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <Heading level={2} className="mb-4">
             About <span className="gradient-text">Arnav</span>

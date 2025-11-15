@@ -23,11 +23,11 @@ export function Text({
   };
 
   const sizeClasses = {
-    sm: 'text-sm',
-    base: 'text-base',
-    lg: 'text-lg',
-    xl: 'text-xl',
-    '2xl': 'text-2xl',
+    sm: 'text-xs md:text-sm',
+    base: 'text-sm md:text-base',
+    lg: 'text-base md:text-lg',
+    xl: 'text-lg md:text-xl',
+    '2xl': 'text-xl md:text-2xl',
   };
 
   return (

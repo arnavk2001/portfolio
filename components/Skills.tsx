@@ -46,7 +46,7 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-32 px-6 relative">
+    <section id="skills" className="py-16 md:py-32 px-6 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <Heading level={2} className="mb-4">

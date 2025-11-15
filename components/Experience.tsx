@@ -79,7 +79,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-32 px-6 relative">
+    <section id="experience" className="py-16 md:py-32 px-6 relative">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <Heading level={2} className="mb-4">
@@ -104,7 +104,7 @@ export default function Experience() {
                 <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-r from-sky-600 to-sky-400 border-4 border-background-secondary z-10"></div>
 
                 <div className={`w-full md:w-[calc(50%-2rem)] ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
-                  <div className="glass-strong rounded-2xl p-8 shadow-2xl hover:shadow-ocean-light/10 transition-all duration-300 group hover:-translate-y-1 border border-border-default">
+                  <div className="glass-strong rounded-2xl p-8 shadow-2xl hover:shadow-ocean-light/10 transition-all duration-300 group hover:-translate-y-1 hover:border-2 hover:border-ocean-light">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <div>
                         <Heading level={3} className="mb-2 group-hover:text-ocean-light transition-colors">
