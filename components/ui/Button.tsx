@@ -19,7 +19,7 @@ export function Button({
   className = '',
   onClick
 }: ButtonProps) {
-  const baseClasses = 'font-semibold rounded-xl transition-all transform hover:scale-105 inline-flex items-center gap-2';
+  const baseClasses = 'font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2';
   
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
@@ -28,7 +28,7 @@ export function Button({
   };
 
   const variantClasses = {
-    solid: 'bg-ocean-blue hover:bg-ocean-dark text-white shadow-lg hover:shadow-ocean-light/50',
+    solid: 'bg-ocean-blue hover:bg-ocean-dark text-white shadow-sm hover:shadow-md hover:shadow-ocean-light/20',
     gradient: (() => {
       const gradients = {
         primary: 'bg-gradient-to-r from-sky-600 via-sky-500 to-sky-600 animate-gradient',
@@ -39,9 +39,9 @@ export function Button({
         purple: 'bg-gradient-to-r from-purple-600 via-purple-500 to-purple-400 animate-gradient',
         magenta: 'bg-gradient-to-r from-pink-600 via-pink-500 to-pink-400 animate-gradient',
       };
-      return `${gradients[gradientType]} text-white shadow-2xl hover:shadow-ocean-light/50`;
+      return `${gradients[gradientType]} text-white shadow-sm hover:shadow-md hover:shadow-ocean-light/20`;
     })(),
-    outline: 'glass-strong hover:bg-ocean-light/10 text-text-primary border-ocean-light/20 hover:border-ocean-light/50 shadow-xl',
+    outline: 'glass-strong hover:bg-ocean-light/10 text-text-primary border-ocean-light/20 hover:border-ocean-light/50 shadow-sm hover:shadow-md',
     ghost: 'text-text-secondary hover:text-text-primary hover:bg-ocean-light/5',
   };
 
