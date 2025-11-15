@@ -4,7 +4,7 @@ export const structuredData = {
   name: "Arnav Kulkarni",
   alternateName: "Arnav V Kulkarni",
   url: "https://arnavvkulkarni.com",
-  image: "/arnav.png",
+  image: "https://arnavvkulkarni.com/arnav.png",
   jobTitle: "Software Engineer",
   worksFor: {
     "@type": "Organization",
