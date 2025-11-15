@@ -35,17 +35,21 @@ export default function About() {
 
             {/* Fact 3 - Poetry - Card (2x2) */}
             <div className="glass rounded-2xl p-6 hover:bg-ocean-light/10 transition-all duration-300 group relative overflow-hidden border border-ocean-light/20 md:col-span-2 md:row-span-2 md:min-h-0">
-              <div className="absolute top-0 right-0 text-8xl opacity-5 group-hover:opacity-10 transition-opacity">✍️</div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-10 group-hover:opacity-15 transition-opacity">
+                <Image 
+                  src="/parchment.png" 
+                  alt="Parchment" 
+                  fill
+                  className="object-contain"
+                />
+              </div>
               <div className="relative z-10 h-full flex flex-col justify-center">
                 <div className="text-5xl mb-3">📝</div>
                 <Text variant="primary" className="font-semibold mb-2 text-lg">Poet at Heart</Text>
                 <Text variant="secondary" className="leading-relaxed mb-4">
-                  I write poems to express thoughts that code can&apos;t capture. 
-                  Words flow like water, creating ripples of emotion.
+                  I enjoy expressing myself through poetry, weaving words into emotions and stories.
                 </Text>
-                <Text variant="muted" size="sm" className="italic">
-                  &ldquo;Debugging code by day, crafting verses by night&rdquo; ✨
-                </Text>
+             
               </div>
             </div>
 
@@ -62,7 +66,7 @@ export default function About() {
                 </div>
                 <div className="flex flex-col items-center text-center">
                   <Text variant="accent" className="font-bold text-5xl mb-2">5&apos;10&rdquo;</Text>
-                  <Text variant="muted" size="sm">Perfect for reaching keyboards and coffee mugs</Text>
+                  <Text variant="muted" size="sm">Perfect for reaching keyboards and tea cups</Text>
                 </div>
               </div>
             </div>
@@ -71,27 +75,39 @@ export default function About() {
             <div className="glass rounded-2xl p-6 hover:bg-ocean-light/10 transition-all duration-300 group relative overflow-hidden border border-ocean-light/20 md:min-h-0">
               <div className="absolute top-0 right-0 text-8xl opacity-5 group-hover:opacity-10 transition-opacity">💻</div>
               <div className="relative z-10">
-                <Text variant="accent" className="font-bold text-4xl mb-2">5+</Text>
-                <Text variant="primary" className="font-semibold mb-1">Years Coding</Text>
-                <Text variant="muted" size="sm">Building things since high school</Text>
+                <Text variant="accent" className="font-bold text-4xl mb-2">15</Text>
+                <Text variant="primary" className="font-semibold mb-1">Years Ago</Text>
+                <Text variant="muted" size="sm">I built my first website</Text>
               </div>
             </div>
 
-            {/* Fact 5 - Coffee - Small Card (1x1) */}
+            {/* Fact 5 - Chai - Small Card (1x1) */}
             <div className="glass rounded-2xl p-6 hover:bg-ocean-light/10 transition-all duration-300 group relative overflow-hidden border border-ocean-light/20 md:min-h-0">
-              <div className="absolute top-0 right-0 text-8xl opacity-5 group-hover:opacity-10 transition-opacity">☕</div>
+              <div className="absolute bottom-0 right-0 w-24 h-24 opacity-30 group-hover:opacity-50 transition-opacity">
+                <Image 
+                  src="/chai-cup.png" 
+                  alt="Chai" 
+                  fill
+                  className="object-contain"
+                />
+              </div>
               <div className="relative z-10">
-                <Text variant="accent" className="font-bold text-4xl mb-2">∞</Text>
-                <Text variant="primary" className="font-semibold mb-1">Cups of Coffee</Text>
-                <Text variant="muted" size="sm">Fueling late-night coding sessions</Text>
+                <Text variant="primary" className="font-semibold mb-1">Chai Lover</Text>
+                <Text variant="muted" size="sm">Fueling coding sessions, one cup at a time</Text>
               </div>
             </div>
 
             {/* Fact 6 - Ocean Name - Wide Card (3x1) */}
             <div className="glass rounded-2xl p-6 hover:bg-ocean-light/10 transition-all duration-300 group relative overflow-hidden border border-ocean-light/20 md:col-span-2 md:min-h-0">
-              <div className="absolute top-0 right-0 text-8xl opacity-5 group-hover:opacity-10 transition-opacity">🌊</div>
+              <div className="absolute top-0 right-0 w-40 h-40 opacity-15 group-hover:opacity-30 transition-opacity">
+                <Image 
+                  src="/wave.png" 
+                  alt="Wave" 
+                  fill
+                  className="object-contain"
+                />
+              </div>
               <div className="relative z-10 flex items-center gap-6">
-                <div className="text-6xl">🌊</div>
                 <div>
                   <Text variant="accent" className="font-bold text-4xl mb-1">अर्णव</Text>
                   <Text variant="primary" className="font-semibold mb-1 text-lg">Ocean-Themed Name</Text>
@@ -108,29 +124,38 @@ export default function About() {
             What I <span className="gradient-text">Value</span>
           </Heading>
           
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="glass-strong rounded-2xl p-8 hover:shadow-ocean-light/20 transition-all duration-300 border border-ocean-light/20">
-              <div className="text-4xl mb-4">🎯</div>
-              <Heading level={4} className="mb-3">Clarity</Heading>
+          <div className="grid md:grid-cols-4 gap-6">
+            <div className="glass-strong rounded-2xl p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-ocean-light/20">
+              <div className="text-4xl mb-4">⚡</div>
+              <Heading level={4} className="mb-3">Citius</Heading>
               <Text variant="secondary" className="leading-relaxed">
-                Clean code, clear communication, and straightforward solutions. Complexity is the enemy of maintainability.
+                Faster is better. I prioritize efficiency and performance in everything I build.
               </Text>
             </div>
 
-            <div className="glass-strong rounded-2xl p-8 hover:shadow-ocean-light/20 transition-all duration-300 border border-ocean-light/20">
-              <div className="text-4xl mb-4">🚀</div>
-              <Heading level={4} className="mb-3">Growth</Heading>
+            <div className="glass-strong rounded-2xl p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-ocean-light/20">
+              <div className="text-4xl mb-4">🧗</div>
+              <Heading level={4} className="mb-3">Altius</Heading>
               <Text variant="secondary" className="leading-relaxed">
-                Learning never stops. Every project is an opportunity to level up and discover new approaches.
+                Love to scale new heights. I am driven by challenges that push me beyond my limits.
               </Text>
             </div>
 
-            <div className="glass-strong rounded-2xl p-8 hover:shadow-ocean-light/20 transition-all duration-300 border border-ocean-light/20">
-              <div className="text-4xl mb-4">💡</div>
-              <Heading level={4} className="mb-3">Impact</Heading>
+            <div className="glass-strong rounded-2xl p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-ocean-light/20">
+              <div className="text-4xl mb-4">🦾</div>
+              <Heading level={4} className="mb-3">Fortius</Heading>
               <Text variant="secondary" className="leading-relaxed">
-                Technology should make people&apos;s lives better. I build things that solve real problems for real people.
+                Strength comes from resilience. Persisting through tough times is what matters.
               </Text>
+            </div>
+              
+              <div className="glass-strong rounded-2xl p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-ocean-light/20">
+              <div className="text-4xl mb-4">🤝</div>
+              <Heading level={4} className="mb-3">Communiter</Heading>
+              <Text variant="secondary" className="leading-relaxed">
+                Together we thrive. I am a team player who believes in playing for the front of the jersey. 
+              </Text>
+              
             </div>
           </div>
         </div>
