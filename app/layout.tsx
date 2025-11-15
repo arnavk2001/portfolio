@@ -29,6 +29,11 @@ export const metadata: Metadata = {
   description: "Arnav Kulkarni - Software Engineer specializing in distributed systems, machine learning, and full-stack development. UCSD graduate with experience in C++, Go, Python, and cloud technologies. Former Research Associate at UCSD Contijoch Lab working on MRI imaging systems.",
   keywords: [
     "Arnav Kulkarni",
+    "Arnav V Kulkarni",
+    "a3kulkarni",
+    "arnavk2001",
+    "Arnav Kulkarni PICT",
+    "Arnav Kulkarni Pune",
     "Arnav Kulkarni UCSD",
     "Arnav Kulkarni Software Engineer",
     "Software Engineer",
@@ -44,7 +49,6 @@ export const metadata: Metadata = {
     "Contijoch Lab",
     "ARKS MRI",
     "Portfolio",
-    "arnavk2001"
   ],
   authors: [{ name: "Arnav Kulkarni", url: "https://github.com/arnavk2001" }],
   creator: "Arnav Kulkarni",
@@ -74,12 +78,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Arnav Kulkarni - Software Engineer | UCSD Graduate",
-    description: "Software Engineer specializing in distributed systems, machine learning, and full-stack development.",
-    images: ["/og-image.png"],
-  },
   robots: {
     index: true,
     follow: true,
@@ -90,9 +88,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  verification: {
-    google: "your-google-verification-code", // Add your Google Search Console verification code
   },
   icons: {
     icon: [

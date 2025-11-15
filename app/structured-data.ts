@@ -2,22 +2,22 @@ export const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Arnav Kulkarni",
-  alternateName: "arnavk2001",
+  alternateName: "Arnav V Kulkarni",
   url: "https://arnavvkulkarni.com",
   image: "/arnav.png",
   jobTitle: "Software Engineer",
   worksFor: {
     "@type": "Organization",
-    name: "UCSD Contijoch Research Laboratory"
+    name: "UCSD Contijoch Research Laboratory",
   },
   alumniOf: {
     "@type": "EducationalOrganization",
     name: "University of California, San Diego",
-    sameAs: "https://ucsd.edu"
+    sameAs: "https://ucsd.edu",
   },
   sameAs: [
     "https://github.com/arnavk2001",
-    "https://linkedin.com/in/a3kulkarni"
+    "https://linkedin.com/in/a3kulkarni",
   ],
   knowsAbout: [
     "Distributed Systems",
@@ -31,7 +31,8 @@ export const structuredData = {
     "Microservices",
     "RAFT Consensus",
     "Neural Networks",
-    "Embedded Systems"
+    "Embedded Systems",
   ],
-  description: "Software Engineer specializing in distributed systems, machine learning, and full-stack development. UCSD graduate with experience in C++, Go, Python, and cloud technologies. Former Research Associate at UCSD Contijoch Lab working on MRI imaging systems."
+  description:
+    "Software Engineer specializing in distributed systems, machine learning, and full-stack development. UCSD graduate with experience in C++, Go, Python, and cloud technologies. Former Research Associate at UCSD Contijoch Lab working on MRI imaging systems.",
 };
