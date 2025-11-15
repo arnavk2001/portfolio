@@ -1,7 +1,38 @@
+'use client';
+
 import { Heading, Text, Button } from './ui';
 import Image from 'next/image';
+import posthog from 'posthog-js';
 
 export default function Contact() {
+  const handleLinkedInClick = () => {
+    const eventData = {
+      button_type: 'linkedin',
+      button_location: 'contact_section',
+    };
+    console.log('📊 PostHog Event [DEV]: connect_button_clicked', eventData);
+    posthog.capture('connect_button_clicked', eventData);
+  };
+
+  const handleGitHubClick = () => {
+    const eventData = {
+      button_type: 'github',
+      button_location: 'contact_section',
+    };
+    console.log('📊 PostHog Event [DEV]: connect_button_clicked', eventData);
+    posthog.capture('connect_button_clicked', eventData);
+  };
+
+  const handleEmailClick = () => {
+    const eventData = {
+      button_type: 'send_email',
+      button_location: 'contact_section',
+      email: 'arnavvaibhavkulkarni@gmail.com',
+    };
+    console.log('📊 PostHog Event [DEV]: email_button_clicked', eventData);
+    posthog.capture('email_button_clicked', eventData);
+  };
+
   return (
     <section id="contact" className="py-16 md:py-32 px-6 relative">
       <div className="max-w-4xl mx-auto">
@@ -27,7 +58,9 @@ export default function Contact() {
                 href="https://linkedin.com/in/a3kulkarni"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleLinkedInClick}
                 className="glass rounded-2xl p-6 hover:bg-ocean-light/10 transition-all duration-300 group text-center"
+                data-ph-capture="linkedin-connect"
               >
                 <div className="inline-flex p-4 rounded-xl bg-ocean-blue/20 mb-4 group-hover:bg-ocean-blue/40 transition-all">
                   <svg className="w-6 h-6 text-ocean-blue transition-transform" fill="currentColor" viewBox="0 0 24 24">
@@ -43,7 +76,9 @@ export default function Contact() {
                 href="https://github.com/arnavk2001"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleGitHubClick}
                 className="glass rounded-2xl p-6 hover:bg-ocean-light/10 transition-all duration-300 group text-center"
+                data-ph-capture="github-connect"
               >
                 <div className="inline-flex p-4 rounded-xl bg-ocean-dark/20 mb-4 group-hover:bg-ocean-dark/40 transition-all">
                   <svg className="w-6 h-6 text-ocean-dark transition-transform" fill="currentColor" viewBox="0 0 24 24">
@@ -62,7 +97,9 @@ export default function Contact() {
                 variant="gradient"
                 gradientType="complementary"
                 size="lg"
+                onClick={handleEmailClick}
                 className="shadow-2xl shadow-orange-400/25 !text-base md:!text-lg"
+                data-ph-capture="send-email"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

@@ -1,10 +1,18 @@
 'use client';
 
-'use client';
-
 import { Heading, Text, Button } from './ui';
+import posthog from 'posthog-js';
 
 export default function Hero() {
+  const handleHireMeClick = () => {
+    const eventData = {
+      button_type: 'hire_me',
+      button_location: 'hero_section',
+    };
+    console.log('📊 PostHog Event [DEV]: hire_me_button_clicked', eventData);
+    posthog.capture('hire_me_button_clicked', eventData);
+  };
+
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-32 md:pt-20 relative overflow-hidden">
       {/* Floating particles */}
@@ -72,7 +80,13 @@ export default function Hero() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Button>
-          <Button href="#contact" variant="outline" size="lg">
+          <Button 
+            href="#contact" 
+            variant="outline" 
+            size="lg"
+            onClick={handleHireMeClick}
+            data-ph-capture="hire-me"
+          >
             Get in Touch
           </Button>
         </div>        <div className="mt-16 flex justify-center gap-6 animate-fade-in-delay-3">

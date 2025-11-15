@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from './ui';
 import { ThemeToggle } from './ThemeToggle';
+import posthog from 'posthog-js';
 
 const navItems = [
   { name: 'Home', href: '/#hero' },
@@ -19,6 +20,15 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const pathname = usePathname();
+
+  const handleHireMeClick = () => {
+    const eventData = {
+      button_type: 'hire_me',
+      button_location: 'navbar',
+    };
+    console.log('📊 PostHog Event [DEV]: hire_me_button_clicked', eventData);
+    posthog.capture('hire_me_button_clicked', eventData);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -96,6 +106,7 @@ export default function Navbar() {
               gradientType="secondary"
               size="sm"
               className="hidden md:inline-flex"
+              onClick={handleHireMeClick}
             >
               Hire Me
             </Button>
