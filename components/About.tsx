@@ -28,6 +28,7 @@ export default function About() {
                   src="/shinchan-sprite.png" 
                   alt="Shinchan" 
                   fill
+                  sizes="(max-width: 768px) 80px, 140px"
                   className="object-contain"
                 />
               </div>
@@ -40,6 +41,7 @@ export default function About() {
                   src="/parchment.png" 
                   alt="Parchment" 
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-contain"
                 />
               </div>
@@ -61,6 +63,7 @@ export default function About() {
                     src="/height.png" 
                     alt="Height" 
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-contain"
                   />
                 </div>
@@ -88,6 +91,7 @@ export default function About() {
                   src="/chai-cup.png" 
                   alt="Chai" 
                   fill
+                  sizes="96px"
                   className="object-contain"
                 />
               </div>
@@ -104,6 +108,7 @@ export default function About() {
                   src="/wave.png" 
                   alt="Wave" 
                   fill
+                  sizes="160px"
                   className="object-contain"
                 />
               </div>
