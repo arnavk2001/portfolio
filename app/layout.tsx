@@ -2,8 +2,12 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { PostHogProvider } from "@/components/PostHogProvider";
+import { PostHogPageView } from "@/components/PostHogPageView";
+import { DevModeIndicator } from "@/components/DevModeIndicator";
 import { structuredData } from "./structured-data";
 import Script from "next/script";
+import { Suspense } from "react";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -123,9 +127,15 @@ export default function RootLayout({
         >
           {JSON.stringify(structuredData)}
         </Script>
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        <PostHogProvider>
+          <Suspense fallback={null}>
+            <PostHogPageView />
+          </Suspense>
+          <ThemeProvider>
+            {children}
+          </ThemeProvider>
+          <DevModeIndicator />
+        </PostHogProvider>
       </body>
     </html>
   );
