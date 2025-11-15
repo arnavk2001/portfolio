@@ -58,7 +58,7 @@ export default function Contact() {
 
             <div className="text-center">
               <Button 
-                href="mailto:arnav@example.com"
+                href="mailto:arnavvaibhavkulkarni@gmail.com"
                 variant="gradient"
                 gradientType="complementary"
                 size="lg"
