@@ -2,43 +2,79 @@ import { Heading, Text } from './ui';
 
 const experiences = [
   {
-    title: "Senior Software Engineer",
-    company: "Tech Innovations Inc.",
-    period: "2023 - Present",
-    description: "Leading development of enterprise-scale applications and mentoring junior developers. Architecting scalable solutions using modern cloud technologies.",
+    title: "Staff Research Associate II",
+    company: "UCSD, Contijoch Research Laboratory",
+    period: "June 2024 - September 2025",
+    description: "Engineered a C++ package for Siemens MRI scanner to implement Autonomous Radial K-space Sampling (ARKS), improving uniformity by 15% and image quality by 6% for cardiac MRI through data-driven angle selection.",
     achievements: [
-      "Built microservices architecture serving 100K+ daily users",
-      "Reduced API response time by 60% through optimization",
-      "Led team of 5 developers in agile environment",
-      "Implemented CI/CD pipelines reducing deployment time by 75%"
+      "Utilized nested virtualization to compile and validate shared libraries, enabling interoperability between the reconstruction system running on Linux and the Windows-based control environment.",
+      "Implemented a high-performance compute pipeline with efficient memory and buffer management, ensured scalability, while optimizing for low latency and high throughput in real-time imaging.",
     ],
-    tags: ["React", "Node.js", "AWS", "Docker"]
   },
   {
-    title: "Full-Stack Developer",
-    company: "Digital Solutions Ltd.",
-    period: "2021 - 2023",
-    description: "Developed and maintained multiple client-facing web applications. Collaborated with design and product teams to deliver high-quality solutions.",
+    title: "Research Assistant",
+    company: "UCSD, Machine Intelligence, Computing and Security Lab",
+    period: " March 2024 - May 2024",
+    description: "Compressed model size without altering model architecture by collapsing layers of the neural network.",
     achievements: [
-      "Created responsive SPAs with React and TypeScript",
-      "Integrated payment gateways and third-party APIs",
-      "Improved application performance by 40%",
-      "Mentored 3 junior developers"
+      "Implemented LayerCollapse Algorithm on Integer-only BERT to selectively collapse layers of the Transformer model.",
+      "Optimized model training with CUDA for GPU acceleration, and conducted debugging and performance evaluation."
     ],
-    tags: ["TypeScript", "PostgreSQL", "GraphQL", "Next.js"]
+
   },
   {
-    title: "Software Engineer Intern",
-    company: "StartUp Ventures",
-    period: "2020 - 2021",
-    description: "Contributed to MVP development and learned industry best practices. Worked on both frontend and backend features.",
+    title: "Software Developer",
+    company: "UCSD, ITA Conference",
+    period: "Jan 2024 - March 2024",
+    description: "Engineered dynamic event scheduling system with streamlining planning and engagement.",
     achievements: [
-      "Developed key features for product launch",
-      "Wrote comprehensive unit and integration tests",
-      "Participated in code reviews and design discussions"
+      "Designed a database for 6000+ attendees, implemented authentication based on OAuth2, access control, and integrated RESTful APIs to suppport web and mobile application.",
+      "Designed and developed a responsive front-end, improving user experience across devices.",
     ],
-    tags: ["JavaScript", "MongoDB", "Express", "React"]
-  }
+  },
+  {
+    title: "Research Assistant",
+    company: "UCSD, Boolan Labs",
+    period: "November 2023 - February 2024",
+    description: "Designed a lightweight neural network for on-device arrhythmia detection using time-series ECG signal, deploying on embedded hardware.",
+    achievements: [
+      "Deployed compressed models on STM32-microcontroller for real-time detection of Ventricular Arrhythmia in patients from ECG signal.",
+      "Implemented selective pruning based on Lottery Ticket Hypothesis, retaining only critical model weights, reducing memory usage by 37% and maintaining 97% precision." ,
+      "Utilized Docker and Kubernetes to manage distributed training across GPU nodes."
+    ],
+
+  },
+  {
+    title: "Research Assistant",
+    company: "PICT, Computational Linguistics Lab",
+    period: "July 2022 - June 2023",
+    description: "Conducted research on multi-modal video summarization of English news videos to develop an assistive tool for the visually impaired.",
+    achievements: [
+      "Utilized seq2seq RNNs for subtitle generation",
+      "Used CRAFT (Character Region Awareness for Text Detection) for text detection in video frames with WER of 0.96.",
+      "Summarized the generated text using BERT-based transformer models."
+    ],
+  },
+  {
+    title: "Software Development Intern",
+    company: "Siemens Digital Industries Software",
+    period: "May 2022 - July 2022",
+    description: "Improving user experience in finding items unassigned to structure partitions in CAD designs on the web-based client PLM platform, Teamcenter.",
+    achievements: [
+      "Developed a proof-of-concept feature that enhanced item finding functionality for unassigned items in CAD designs.",
+      "Refactored feature test files to improve reliability of Cucumber tests for Acceptance Test-Driven Development (ATDD).",
+    ],
+  },
+  {
+    title: "Software Development Intern",
+    company: "Dynamisch IT Pvt. Ltd.",
+    period: "February 2022 - March 2022",
+    description: "Developed a client-centric dashboard for visualizing real-time financial data, and enhanced the web application's performance with regard to the response time.",
+    achievements: [
+      "Developed a dynamic dashboard and integrated RESTful APIs to ensure seamless updates.",
+      "Optimized API calls to improve data load times, enhancing user experience and dashboard responsiveness.",
+    ],
+  },   
 ];
 
 export default function Experience() {
@@ -93,17 +129,6 @@ export default function Experience() {
                         </li>
                       ))}
                     </ul>
-
-                    <div className="flex flex-wrap gap-2">
-                      {exp.tags.map((tag, idx) => (
-                        <span 
-                          key={idx}
-                          className="px-3 py-1 bg-background-tertiary text-text-secondary rounded-lg text-sm border border-border-default hover:border-ocean-light/50 transition-colors"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
                   </div>
                 </div>
               </div>
