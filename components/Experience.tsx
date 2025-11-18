@@ -34,7 +34,7 @@ const experiences = [
   },
   {
     title: "Research Assistant",
-    company: "UCSD, Boolan Labs",
+    company: "UCSD, Boolean Labs",
     period: "November 2023 - February 2024",
     description: "Designed a lightweight neural network for on-device arrhythmia detection using time-series ECG signal, deploying on embedded hardware.",
     achievements: [
